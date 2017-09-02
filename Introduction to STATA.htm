@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Introduction to STATA</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<B><FONT FACE="Palatino" COLOR="#000080"><P ALIGN="CENTER">An Efficient Introduction to STATA</P>
+</B></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="CENTER">( Pierre DUBOIS, </FONT><A HREF="mailto:dubois@toulouse.inra.fr"><FONT SIZE=2>dubois@toulouse.inra.fr</FONT></A><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> )</P>
+<P ALIGN="JUSTIFY"></P>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>To start STATA, run the file </FONT><FONT FACE="Palatino" SIZE=3>c:\stata\wstata.exe</LI></P></UL>
+
+
+<UL>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Program file "</FONT><FONT FACE="Palatino" SIZE=3>profile.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">" in directory of wstata.exe automatically executed when STATA starts: example</LI></P></UL>
+</FONT>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=746>
+<TR><TD WIDTH="51%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">Set mem 50m</DIR>
+</FONT></TD>
+<TD WIDTH="49%" VALIGN="TOP">
+<I><FONT FACE="Palatino" SIZE=2 COLOR="#000080"><P ALIGN="JUSTIFY">sets memory at 50 megabytes (larger than data file size)</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="51%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">Set matsize 800</DIR>
+</FONT></TD>
+<TD WIDTH="49%" VALIGN="TOP">
+<I><FONT FACE="Palatino" SIZE=2 COLOR="#000080"><P ALIGN="JUSTIFY">sets matrix size to 800</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="51%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">Sysdir set PERSONAL "c:\stata\ado\personal"</DIR>
+</FONT></TD>
+<TD WIDTH="49%" VALIGN="TOP">
+<I><FONT FACE="Palatino" SIZE=2 COLOR="#000080"><P ALIGN="JUSTIFY">sets directory system PERSONAL as "c:\stata\ado\personal"</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="51%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">Sysdir set STBPLUS "c:\stata\ado\stbplus"</DIR>
+</FONT></TD>
+<TD WIDTH="49%" VALIGN="TOP">
+<I><FONT FACE="Palatino" SIZE=2 COLOR="#000080"><P ALIGN="JUSTIFY">sets directory system STBPLUS as "c:\stata\ado\stbplus"</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="51%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">cd c:\Data</DIR>
+</FONT></TD>
+<TD WIDTH="49%" VALIGN="TOP">
+<I><FONT FACE="Palatino" SIZE=2 COLOR="#000080"><P ALIGN="JUSTIFY">Define the current working directory  c:\Data</I></FONT></TD>
+</TR>
+</TABLE>
+
+
+<UL>
+<FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Regularly update your STATA software by typing the command </FONT><FONT FACE="Courier New" SIZE=2>update query</LI></P>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Several windows can be opened through the window list of the menu: command, results, review, variables, graph, viewer, data editor and </FONT><FONT FACE="Palatino" SIZE=3>.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> file editor.</LI></P>
+<P ALIGN="JUSTIFY"><LI>Data files have extension </FONT><FONT FACE="Palatino" SIZE=3>.dta</LI></P>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Program files can have extension </FONT><FONT FACE="Palatino" SIZE=3>.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Palatino" SIZE=3>.ado</LI></P>
+<P ALIGN="JUSTIFY"><LI>.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> files must be in working directory and </FONT><FONT FACE="Palatino" SIZE=3>prog.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> is run with the command: </FONT><FONT FACE="Courier New" SIZE=2>do prog</LI></P>
+</FONT><FONT FACE="Palatino" SIZE=3><P ALIGN="JUSTIFY"><LI>.ado</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> files are searched in sub-directories of </FONT><FONT FACE="Palatino" SIZE=3>c:\stata\ado\</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> and are run directly with the name of the program as a command.</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>STATA works with observations, variables, scalars, labels, macro variables, temporary variables and programs.</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>STATA commands are separated by paragraph return or another sign </LI></P>
+<P ALIGN="JUSTIFY"><LI>Help for STATA: commands  </FONT><FONT FACE="Courier New" SIZE=2>help</FONT><FONT FACE="Courier New" SIZE=2 COLOR="#000080"> </FONT><I><FONT FACE="Courier New" SIZE=2>command name</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">  and  </FONT><FONT FACE="Courier New" SIZE=2>search</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> </FONT><I><FONT FACE="Courier New" SIZE=2>keyword</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">. Use the STATA help to learn STATA. STATA allows to search programs and commands available on the net with  </FONT><FONT FACE="Courier New" SIZE=2>webseek</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> </FONT><I><FONT FACE="Courier New" SIZE=2>keyword</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">  . </FONT><FONT FACE="Courier New" SIZE=2>webseek</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> displays links for installation.</LI></P>
+<P ALIGN="JUSTIFY"><LI>Input data with data editor or use </FONT><FONT FACE="Courier New" SIZE=2>infile</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Courier New" SIZE=2>insheet</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> commands to read non STATA files.</LI></P>
+<P ALIGN="JUSTIFY"><LI>Read STATA files with command </FONT><FONT FACE="Courier New" SIZE=2>use<I> file name</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> (transform formats with Stattransfer or Dbmscopy)</LI></P>
+<P ALIGN="JUSTIFY"><LI>Save a file with command </FONT><FONT FACE="Courier New" SIZE=2>save</FONT><FONT FACE="Courier New" SIZE=2 COLOR="#000080"> </FONT><I><FONT FACE="Courier New" SIZE=2>file name</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> (the default extension is </FONT><I><FONT FACE="Courier New" SIZE=2>.dta</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">)</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Record results in a </FONT><FONT FACE="Palatino" SIZE=3>.log</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Palatino" SIZE=3>.smcl</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> file (see also</FONT><FONT FACE="Courier New" SIZE=2> help translatetext</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">): open log file with </FONT><FONT FACE="Courier New" SIZE=2>log using resultsname</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> , close recording log file with </FONT><FONT FACE="Courier New" SIZE=2>log close</LI></P></UL>
+
+
+<UL>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Description of variables in memory: </FONT><FONT FACE="Courier New" SIZE=2>describe </FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">or</FONT><FONT FACE="Courier New" SIZE=2> d</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">. Also : </FONT><FONT FACE="Courier New" SIZE=2>codebook</LI></P>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Compression of data in memory space: </FONT><FONT FACE="Courier New" SIZE=2>compress</LI></P>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Data are recorded as observations (rows) for which variables (columns) are defined.</LI></P>
+<P ALIGN="JUSTIFY"><LI>Missing observation is coded with </FONT><FONT FACE="Palatino" SIZE=3>.</LI></P>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Observations are numbered with system variables</FONT><FONT FACE="Palatino" SIZE=3> </FONT><FONT FACE="Courier New" SIZE=2>_n</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> and total number is </FONT><FONT FACE="Courier New" SIZE=2>_N</LI></P></UL>
+
+
+<UL>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Commands syntax: </FONT><I><FONT FACE="Courier New" SIZE=2>prefix  </I>:<I>  command name    suffix    </I>,<I>   options</LI></P>
+</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Use of prefix: </FONT><FONT FACE="Courier New" SIZE=2>by <I>varname</I> :</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> for data sorted by command: </FONT><FONT FACE="Courier New" SIZE=2>sort <I>varname</LI></P></UL>
+
+
+<UL>
+</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Suffix: </FONT><FONT FACE="Courier New" SIZE=2>if <I>condition</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">   or   </FONT><FONT FACE="Courier New" SIZE=2>in <I>20/30 </I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">(range of observations)</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Useful commands (see STATA help corresponding):</LI></P>
+</FONT><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Descriptive statistics commands: </FONT><FONT FACE="Courier New" SIZE=2>codebook</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>list</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>tabulate</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Courier New" SIZE=2>tab</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>table</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>summarize</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Courier New" SIZE=2>sum</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>corr</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>reshape</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>pctile</FONT><FONT SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> compare</FONT><FONT SIZE=3 COLOR="#000080">,</LI></P>
+<P ALIGN="JUSTIFY"><LI>Variable management commands </FONT><FONT FACE="Courier New" SIZE=2>generate</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Courier New" SIZE=2>gen</FONT><FONT FACE="Palatino" SIZE=3>, </FONT><FONT FACE="Courier New" SIZE=2>egen</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>replace</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>recode</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>rename</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>drop</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>keep</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>label</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, creating interactions with </FONT><FONT FACE="Courier New" SIZE=2>xi</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">,</FONT><FONT SIZE=3 COLOR="#000080"> doing loops with </FONT><FONT FACE="Courier New" SIZE=2>for</LI></P>
+</FONT><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Data management commands </FONT><FONT FACE="Courier New" SIZE=2>sort</FONT><FONT SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> merge</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>append</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>compress</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>save</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>collapse</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>reshape</LI></P>
+</FONT><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Econometric commands : </FONT><FONT FACE="Courier New" SIZE=2>regress</FONT><FONT SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Courier New" SIZE=2>reg</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>ivreg</FONT><FONT SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> mvreg</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>sureg</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>mvreg</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>qreg</FONT><FONT SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> probit</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>logit</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>mlogit</FONT><FONT SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> tobit</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>predict</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>test</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>lrtest</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>testnl</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>streg</FONT><FONT SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>stcox</FONT><FONT SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> _robust</FONT><FONT SIZE=3 COLOR="#000080">,</LI></P>
+<P ALIGN="JUSTIFY"><LI>P</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">anel data commands (most of them begin with xt): </FONT><FONT FACE="Courier New" SIZE=2>tsset</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xt</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtdata</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtdes</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtgls</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtivreg</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtlogit</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtpois</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtprobit</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtreg</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xtsum</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xttab</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>xttobit</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">. Time series commands : </FONT><FONT FACE="Courier New" SIZE=2>ac</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>arima</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>arch</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, .</LI></P>
+</FONT><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Survey</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> commands for data using stratification, clustering and sampling weights (beginning with svy): </FONT><FONT FACE="Courier New" SIZE=2>svyset</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svydes</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svyreg</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svyivreg</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svylogit</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svypois</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svyprobit</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svysum</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>svytab</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, ..</LI></P>
+<P ALIGN="JUSTIFY"><LI>Graph commands: </FONT><FONT FACE="Courier New" SIZE=2>graph</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Courier New" SIZE=2>gr</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>grhist</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>kdensity</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>cumul</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </LI></P>
+<P ALIGN="JUSTIFY"><LI>STATA creates graphs in format </FONT><FONT FACE="Palatino" SIZE=3>.gph</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Palatino" SIZE=3>.ps</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> or </FONT><FONT FACE="Palatino" SIZE=3>.eps</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> (see </FONT><FONT FACE="Palatino" SIZE=3>help translategph</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">). Can also copy and paste directly a graph in a word processor. A </FONT><FONT FACE="Palatino" SIZE=3>.wmf</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> file is created automatically if pasting in Scientific Word.</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>STATA programs:</LI></P>
+<P ALIGN="JUSTIFY"><LI> </FONT><FONT FACE="Palatino" SIZE=3>.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> files: set of successive commands saved in </FONT><FONT FACE="Palatino" SIZE=3>prog.do</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> and run with command </FONT><FONT FACE="Courier New" SIZE=2>do <I>prog</LI></P></UL>
+
+
+<UL>
+</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Defining a global variable: </FONT><FONT FACE="Courier New" SIZE=2>global <I>globname</I> <I>azerty</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> , then </FONT><I><FONT FACE="Courier New" SIZE=2>$globname</I> </FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> is equal to </FONT><I><FONT FACE="Courier New" SIZE=2>azerty</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> </LI></P>
+<P ALIGN="JUSTIFY"><LI>Defining a local variable: </FONT><FONT FACE="Courier New" SIZE=2>local</FONT><FONT FACE="Palatino" SIZE=3> </FONT><I><FONT FACE="Courier New" SIZE=2>localname</I> <I>azerty</I></FONT><FONT FACE="Courier New" SIZE=2 COLOR="#000080">,</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> then </FONT><FONT FACE="Courier New" SIZE=2>`<I>localname</I>'</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> is equal to </FONT><I><FONT FACE="Courier New" SIZE=2>azerty</LI></P>
+</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Useful macro commands: </FONT><FONT FACE="Courier New" SIZE=2>tokenize</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>macro shift</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, ..</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>Program definition as commands: example</LI></P></UL>
+</FONT>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=751>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT SIZE=2><P ALIGN="JUSTIFY">#delimit;</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP"><DIR>
+
+<I><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY">changes the command delimiter to </FONT><FONT SIZE=3>;</DIR>
+</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT SIZE=2><P ALIGN="JUSTIFY">program define <I>myprog</I> ;</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP"><DIR>
+
+<I><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY">beginning of program definition</DIR>
+</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT SIZE=2><P ALIGN="JUSTIFY">version 7.0;</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP"><DIR>
+
+<I><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY">Stipulates version 7.0 for the syntax of the program</DIR>
+</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">syntax [varlist] [if] [in] [, Beta(real 1.0)];</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP"><DIR>
+
+<I><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY">program uses macros `varlist', `if', `in', `dof', and `beta'. `beta' defaults to 1.0</DIR>
+</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT SIZE=2><P ALIGN="JUSTIFY">if <I>condition1</I> { ; <I>commands</I> ;};</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP"><DIR>
+
+<I><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY">conditions</DIR>
+</I></FONT></TD>
+</TR>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT SIZE=2><P ALIGN="JUSTIFY">else if <I>condition2</I> { ; <I>commands ; </I>}; else { ; <I>commands</I> ; };</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="54%" VALIGN="TOP"><DIR>
+
+<FONT FACE="Courier New" SIZE=2><P ALIGN="JUSTIFY">end;</DIR>
+</FONT></TD>
+<TD WIDTH="46%" VALIGN="TOP"><DIR>
+
+<I><FONT SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY">end of the program definition</DIR>
+</I></FONT></TD>
+</TR>
+</TABLE>
+
+
+<UL>
+<FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>If recorded in an </FONT><FONT FACE="Palatino" SIZE=3>.ado</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> file, automatically searched in any other STATA session.</LI></P>
+<P ALIGN="JUSTIFY"><LI>Program commands: </FONT><FONT FACE="Courier New" SIZE=2>program dir</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>program drop <I>myprog</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>program list</LI></P></UL>
+
+
+<UL>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Maximum likelihood estimation: see </FONT><FONT FACE="Courier New" SIZE=2>help ml</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> and STATA documentation</LI></P>
+<P ALIGN="JUSTIFY"><LI>Non linear least squares estimation: see </FONT><FONT FACE="Courier New" SIZE=2>help nl</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> and STATA documentation</LI></P>
+<P ALIGN="JUSTIFY"><LI>Simulation command: </FONT><FONT FACE="Courier New" SIZE=2>simul</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">. Bootstrap commands:</FONT><FONT FACE="Courier New" SIZE=2> sample</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> bsample</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> bs</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> bstrap</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">,</FONT><FONT FACE="Courier New" SIZE=2> </LI></P></UL>
+
+
+<UL>
+</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Debugger: </FONT><FONT FACE="Courier New" SIZE=2>set trace on</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080">, </FONT><FONT FACE="Courier New" SIZE=2>set trace off</FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"> </LI></P>
+<P ALIGN="JUSTIFY"><LI>DOS commands can be used inside STATA with :  </FONT><FONT FACE="Courier New" SIZE=2>! <I>DOS</I> <I>command</LI></P></UL>
+
+
+<UL>
+</I></FONT><FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Very useful web sites:</LI></P></UL>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>STATA official web site:  </FONT><A HREF="http://www.stata.com/"><FONT SIZE=2>http://www.stata.com/</FONT></A></LI></P>
+<FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>Resources for learning STATA:  </FONT><A HREF="http://www.stata.com/links/resources1.html"><FONT SIZE=2>http://www.stata.com/links/resources1.html</FONT></A></LI></P>
+<FONT FACE="Palatino" SIZE=3 COLOR="#000080"><P ALIGN="JUSTIFY"><LI>UCLA resources to help you learn and use STATA:  </FONT><A HREF="http://www.ats.ucla.edu/stat/stata/"><FONT SIZE=2>http://www.ats.ucla.edu/stat/stata/</FONT></A></LI></P></UL>
+</BODY>
+</HTML>
